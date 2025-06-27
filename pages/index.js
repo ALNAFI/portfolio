@@ -660,7 +660,7 @@ export default function Home() {
                 <p className="text-sm text-gray-800 dark:text-gray-300 mt-2">
                   🎓 B.Sc. in CSE <br />
                   🗓️ 2021 - 2025 <br />
-                  📊 <strong>CGPA:</strong> 3.60 / 4.00
+                  📊 <strong>CGPA:</strong> 3.54 / 4.00
                 </p>
               </div>
 
