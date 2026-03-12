@@ -1,5 +1,6 @@
 // components/TalkSection.jsx
 "use client";
+
 import { useTheme } from "next-themes";
 import {
   FaTwitter,
@@ -9,9 +10,10 @@ import {
   FaFacebookF,
   FaTelegramPlane,
 } from "react-icons/fa";
+import { SOCIAL_LINKS } from "../data/contact";
 
 export default function TalkSection() {
-  const { resolvedTheme } = useTheme(); // Detect actual light/dark mode
+  const { resolvedTheme } = useTheme();
 
   return (
     <div className="text-center py-16 bg-transparent">
@@ -37,7 +39,7 @@ export default function TalkSection() {
 
       <div className="flex justify-center gap-6 mt-6 text-xl">
         <a
-          href="https://x.com/al_nafi10?s=11"
+          href={SOCIAL_LINKS.twitter}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-blue-400 transition"
@@ -45,7 +47,7 @@ export default function TalkSection() {
           <FaTwitter />
         </a>
         <a
-          href="https://www.linkedin.com/in/al-nafi-1ab315344?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          href={SOCIAL_LINKS.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-blue-600 transition"
@@ -53,7 +55,7 @@ export default function TalkSection() {
           <FaLinkedinIn />
         </a>
         <a
-          href="https://www.instagram.com/al_na_fi?igsh=N2t6cml3eDg1eWt4&utm_source=qr"
+          href={SOCIAL_LINKS.instagram}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-pink-500 transition"
@@ -61,7 +63,7 @@ export default function TalkSection() {
           <FaInstagram />
         </a>
         <a
-          href="https://wa.me/8801824748778"
+          href={SOCIAL_LINKS.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-green-500 transition"
@@ -69,7 +71,7 @@ export default function TalkSection() {
           <FaWhatsapp />
         </a>
         <a
-          href="https://www.facebook.com/share/1BNzEdRXuZ/?mibextid=wwXIfr"
+          href={SOCIAL_LINKS.facebook}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-blue-700 transition"
@@ -77,7 +79,7 @@ export default function TalkSection() {
           <FaFacebookF />
         </a>
         <a
-          href="https://t.me/NAFI_NuB"
+          href={SOCIAL_LINKS.telegram}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-sky-500 transition"
@@ -88,3 +90,4 @@ export default function TalkSection() {
     </div>
   );
 }
+

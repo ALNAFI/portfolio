@@ -10,7 +10,7 @@ import SplitText from "../components/SplitText";
 import TextCursor from "../components/TextCursor";
 
 export default function Home() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [toast, setToast] = useState("");
@@ -55,7 +55,7 @@ export default function Home() {
   if (!mounted) return null;
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
   const handleDownloadCV = async (e) => {
@@ -247,7 +247,7 @@ export default function Home() {
               <input
                 type="checkbox"
                 className="theme-switch__checkbox"
-                checked={theme === "dark"}
+                checked={resolvedTheme === "dark"}
                 onChange={toggleTheme}
               />
               <div className="theme-switch__container">
@@ -335,7 +335,7 @@ export default function Home() {
                 <input
                   type="checkbox"
                   className="theme-switch__checkbox"
-                  checked={theme === "dark"}
+                checked={resolvedTheme === "dark"}
                   onChange={() => {
                     setMenuOpen(false);
                     toggleTheme();
